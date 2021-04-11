@@ -33,14 +33,17 @@ const Teams = () => {
           standings.standings?.map((item) => {
             return (
               <div key={uuid()} className="table">
-                {/* <div className="team">
+                <div className="team">
                   <div className="position"> #</div>
                   <div className="team_name"> Name</div>
                   <div className="played_games"> Games</div>
-                  <div className="won_games"> W</div>
-                  <div className="draw_games">D</div>
-                  <div className="lost_games"> L</div>
-                </div> */}
+                  <div className="won_games active"> W</div>
+                  <div className="draw_games active">D</div>
+                  <div className="lost_games active"> L</div>
+                  <div className="goals">G</div>
+                  <div className="points"> Pts</div>
+                  <div className="form active"> F</div>
+                </div>
                 {item.type === "TOTAL" &&
                   item.table?.map((teamData) => {
                     const {
@@ -60,14 +63,14 @@ const Teams = () => {
                         <div className="position"> {position}</div>
                         <div className="team_name"> {team.name}</div>
                         <div className="played_games"> {playedGames}</div>
-                        <div className="won_games"> {won}</div>
-                        <div className="draw_games"> {draw}</div>
-                        <div className="lost_games"> {lost}</div>
+                        <div className="won_games active"> {won}</div>
+                        <div className="draw_games active"> {draw}</div>
+                        <div className="lost_games active"> {lost}</div>
                         <div className="goals">
                           {`${goalsFor}:${goalsAgainst}`}
                         </div>
                         <div className="points"> {points}</div>
-                        <div className="form"> {form}</div>
+                        <div className="form active"> {form}</div>
                       </div>
                     );
                   })}
