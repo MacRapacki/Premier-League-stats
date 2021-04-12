@@ -8,7 +8,7 @@ html {
 
 .container {
   width: 100%;
-  background-color: salmon;
+  background-color: white;
 }
 
 .container h1 {
@@ -27,10 +27,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 40px;
 }
 
 .container .table .team {
-  width: 80%;
+  position: relative;
+  width: 90%;
   min-height: 50px;
   border: 2px solid black;
   border-radius: 10px;
@@ -44,6 +46,7 @@ html {
 }
 
 .container .table .team > * {
+  display: block;
   min-width: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,5 +78,19 @@ html {
 
 .container .table .team .form {
   min-width: 100px;
+}
+
+@media screen and (min-width: 500px) {
+  .active {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=App.css.map */

@@ -29,14 +29,14 @@ const Teams = () => {
     <>
       <div className="container">
         <h1> {` ${standings.competition?.name} table:`}</h1>
-        {standings &&
-          standings.standings?.map((item) => {
-            return (
+        {standings.standings?.map((item) => {
+          return (
+            item.type === "TOTAL" && (
               <div key={uuid()} className="table">
                 <div className="team">
                   <div className="position"> #</div>
                   <div className="team_name"> Name</div>
-                  <div className="played_games"> Games</div>
+                  <div className="played_games"> Apl</div>
                   <div className="won_games active"> W</div>
                   <div className="draw_games active">D</div>
                   <div className="lost_games active"> L</div>
@@ -75,8 +75,9 @@ const Teams = () => {
                     );
                   })}
               </div>
-            );
-          })}
+            )
+          );
+        })}
       </div>
     </>
   );
