@@ -1,11 +1,11 @@
 import "./App.scss";
 
-import Teams from "./components/Teams";
+import Table from "./components/Table";
 
 function App() {
   return (
-    <div className="App">
-      <Teams />
+    <div>
+      <Table />
     </div>
   );
 }

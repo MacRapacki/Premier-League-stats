@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import uuid from "react-uuid";
 
-const Teams = () => {
+const Table = () => {
   const [standings, setStandings] = useState({});
 
   const getStandings = async () => {
@@ -19,12 +19,13 @@ const Teams = () => {
     const data = await resp.json();
     return data;
   };
+
   useEffect(() => {
     getStandings()
       .then((data) => setStandings(data))
       .catch((error) => console.log("error"));
   }, []);
-  console.log(standings);
+
   return (
     <>
       <div className="container">
@@ -83,4 +84,4 @@ const Teams = () => {
   );
 };
 
-export default Teams;
+export default Table;
