@@ -2,7 +2,10 @@
   width: 100%;
   background-color: white;
   padding-top: $nav-height;
+  max-width: 900px;
+  margin: 0 auto;
   h1 {
+    margin-top: 20px;
     text-align: center;
   }
   .table {
