@@ -27,9 +27,9 @@ const Table = () => {
   }, []);
 
   return (
-    <>
+    <section>
       <div className="container">
-        <h1> {` ${standings.competition?.name} table:`}</h1>
+        <h2> {` ${standings.competition?.name} table:`}</h2>
         {standings.standings?.map((item) => {
           return (
             item.type === "TOTAL" && (
@@ -80,7 +80,7 @@ const Table = () => {
           );
         })}
       </div>
-    </>
+    </section>
   );
 };
 
