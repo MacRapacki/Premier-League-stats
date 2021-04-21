@@ -1,1 +1,6 @@
 $nav-height: 50px;
+
+section {
+  min-height: calc(100vh - 80px);
+  padding-top: 50px;
+}

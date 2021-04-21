@@ -1,9 +1,22 @@
-.home {
+header {
+  padding-top: 50px;
   width: 100%;
-  padding-top: $nav-height;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // height: 200px;
+  overflow: hidden;
+
+  .header_img {
+    width: 400px;
+    padding: 20px;
+    // object-fit: cover;
+  }
+}
+
+.home {
+  // width: 100%;
+  // padding-top: $nav-height;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   h1 {
     margin-top: 20px;
   }

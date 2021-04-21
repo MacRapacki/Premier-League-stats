@@ -22,6 +22,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      img {
+        height: 48px;
+        background-color: white;
+        border-radius: 20px;
+      }
     }
     .nav_list {
       width: 55%;

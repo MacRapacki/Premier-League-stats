@@ -5,6 +5,7 @@ import Table from "./components/Table";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
 import Home from "./components/Home";
+import Scorers from "./components/Scorers";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/table" component={Table} />
-        {/* <Route path="/sign-in" component={SignIn} /> */}
+        <Route path="/scorers" component={Scorers} />
       </Switch>
       <Footer />
     </Router>
