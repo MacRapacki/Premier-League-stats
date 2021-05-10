@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  background-color: white;
+  // background-color: white;
   padding-top: $nav-height;
   max-width: 900px;
   margin: 0 auto;
@@ -22,6 +22,7 @@
       display: flex;
       justify-content: space-between;
       margin: 0 0 5px 0;
+      background-color: white;
       & > * {
         display: block;
         min-width: 30px;

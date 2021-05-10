@@ -1,5 +1,12 @@
 $nav-height: 50px;
 
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../images/pexels-dom-le-roy-3991976.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 section {
   min-height: calc(100vh - 80px);
   padding-top: 50px;
