@@ -7,7 +7,15 @@ body {
   background-size: cover;
 }
 
+h2 {
+  margin-top: 30px;
+}
+
 section {
   min-height: calc(100vh - 80px);
   padding-top: 50px;
+  width: 100%;
+  padding-top: $nav-height;
+  max-width: 900px;
+  margin: 0 auto;
 }
