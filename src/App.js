@@ -1,11 +1,11 @@
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Table from "./components/Table";
+import Table from "./components/pages/Table";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
-import Home from "./components/Home";
-import Scorers from "./components/Scorers";
+import Home from "./components/pages/Home";
+import Scorers from "./components/pages/Scorers";
 
 function App() {
   return (
