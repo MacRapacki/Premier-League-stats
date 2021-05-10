@@ -1,0 +1,32 @@
+.teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  a {
+    margin: 10px 20px;
+    .teams_team {
+      border: 2px solid $clr-base-yellow;
+      border-radius: 10px;
+      width: 130px;
+      height: 200px;
+
+      background-color: $clr-base-purple;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5px;
+      .team_img {
+        img {
+          width: 80px;
+        }
+      }
+      .team_name {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+  }
+}

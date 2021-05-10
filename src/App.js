@@ -1,11 +1,12 @@
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Table from "./components/pages/Table";
+import Table from "./pages/Table";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
-import Home from "./components/pages/Home";
-import Scorers from "./components/pages/Scorers";
+import Home from "./pages/Home";
+import Scorers from "./pages/Scorers";
+import Teams from "./pages/Teams";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" component={Home} exact />
         <Route path="/table" component={Table} />
         <Route path="/scorers" component={Scorers} />
+        <Route path="/teams" component={Teams} />
       </Switch>
       <Footer />
     </Router>

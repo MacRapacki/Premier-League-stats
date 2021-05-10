@@ -24,6 +24,9 @@ const Nav = () => {
           >
             Scorers
           </NavLink>
+          <NavLink className="nav_item" activeClassName="selected" to="/teams">
+            Teams
+          </NavLink>
         </ul>
       </div>
     </nav>
