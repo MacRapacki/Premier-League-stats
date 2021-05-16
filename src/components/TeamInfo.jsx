@@ -27,6 +27,7 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
   }, []);
 
   console.log(teamData);
+
   return (
     <div className="team_overlay">
       <div className="team_info">
@@ -37,6 +38,53 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
         >
           X
         </button>
+        <div className="team_crest">
+          <img src={teamData.crestUrl} alt="Team Crest" />
+          <p className="team_name">{teamData.name}</p>
+        </div>
+        <div className="team_members">
+          <h2>Squad:</h2>
+          <div className="team_goalkeepers">
+            <h3>Goalkeepers:</h3>
+            {teamData.squad?.map((person) => {
+              return (
+                person.position === "Goalkeeper" && (
+                  <p className="player_name">{person.name}</p>
+                )
+              );
+            })}
+          </div>
+          <div className="team_defenders">
+            <h3>Defenders:</h3>
+            {teamData.squad?.map((person) => {
+              return (
+                person.position === "Defender" && (
+                  <p className="player_name">{person.name}</p>
+                )
+              );
+            })}
+          </div>
+          <div className="team_midfielders">
+            <h3>Midfielders:</h3>
+            {teamData.squad?.map((person) => {
+              return (
+                person.position === "Midfielder" && (
+                  <p className="player_name">{person.name}</p>
+                )
+              );
+            })}
+          </div>
+          <div className="team_attackers">
+            <h3>Attakers:</h3>
+            {teamData.squad?.map((person) => {
+              return (
+                person.position === "Attacker" && (
+                  <p className="player_name">{person.name}</p>
+                )
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
