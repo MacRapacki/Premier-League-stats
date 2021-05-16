@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import uuid from "react-uuid";
 import TeamInfo from "../components/TeamInfo";
