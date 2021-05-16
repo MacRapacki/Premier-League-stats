@@ -7,11 +7,16 @@ const Nav = () => {
   return (
     <nav className="navigation">
       <div className="nav_wrapper">
-        <Link to="/" exact className="nav_logo">
+        <Link to="/Premier-League-stats/" exact className="nav_logo">
           <img src={Logo} alt="premier league logo" />
         </Link>
         <ul className="nav_list">
-          <NavLink className="nav_item" activeClassName="selected" to="/" exact>
+          <NavLink
+            className="nav_item"
+            activeClassName="selected"
+            to="/Premier-League-stats/"
+            exact
+          >
             Home
           </NavLink>
           <NavLink className="nav_item" activeClassName="selected" to="/table">

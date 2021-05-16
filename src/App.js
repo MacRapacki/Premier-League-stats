@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Nav />
       <Switch>
-        <Route path="/" component={Home} exact />
+        <Route path="/Premier-League-stats/" component={Home} exact />
         <Route path="/table" component={Table} />
         <Route path="/scorers" component={Scorers} />
         <Route path="/teams" component={Teams} />
