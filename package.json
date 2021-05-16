@@ -1,5 +1,4 @@
 {
-  "homepage": "http://MacRapacki.github.io/Premier-League-stats/",
   "name": "pl-stats",
   "version": "0.1.0",
   "private": true,
@@ -19,9 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +39,6 @@
     ]
   },
   "devDependencies": {
-    "file-loader": "^6.2.0",
-    "gh-pages": "^3.1.0"
+    "file-loader": "^6.2.0"
   }
 }
