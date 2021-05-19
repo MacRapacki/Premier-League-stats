@@ -9,6 +9,10 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    background-color: $clr-base-purple;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid $clr-base-yellow;
     .player {
       width: 100%;
       display: flex;

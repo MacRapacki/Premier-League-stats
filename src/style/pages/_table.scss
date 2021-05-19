@@ -22,7 +22,7 @@
       display: flex;
       justify-content: space-between;
       margin: 0 0 5px 0;
-      background-color: white;
+      background-color: gray;
       & > * {
         display: block;
         min-width: 30px;
@@ -31,7 +31,8 @@
         align-items: center;
       }
       &:nth-child(even) {
-        background-color: lightgray;
+        background-color: $clr-base-purple;
+        color: white;
       }
       .active {
         display: none;
