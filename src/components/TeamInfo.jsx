@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import uuid from "react-uuid";
 
 const TeamInfo = ({ teamID, setTeamInfoActive }) => {
   const [teamData, setTeamData] = useState([]);
@@ -7,7 +8,7 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
     const url = `http://api.football-data.org/v2/teams/${teamID}`;
     const options = {
       type: "GET",
-      headers: { "X-Auth-Token": "3fccf6a31f3e4b9fa28393d33f768c10" },
+      headers: { "X-Auth-Token": `${process.env.REACT_APP_API_KEY}` },
       dataType: "json",
     };
 
@@ -25,8 +26,6 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
       .then((data) => setTeamData(data))
       .catch((error) => console.log("error!"));
   }, []);
-
-  console.log(teamData);
 
   return (
     <div className="team_overlay">
@@ -49,7 +48,9 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
             {teamData.squad?.map((person) => {
               return (
                 person.position === "Goalkeeper" && (
-                  <p className="player_name">{person.name}</p>
+                  <p key={uuid()} className="player_name">
+                    {person.name}
+                  </p>
                 )
               );
             })}
@@ -59,7 +60,9 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
             {teamData.squad?.map((person) => {
               return (
                 person.position === "Defender" && (
-                  <p className="player_name">{person.name}</p>
+                  <p key={uuid()} className="player_name">
+                    {person.name}
+                  </p>
                 )
               );
             })}
@@ -69,7 +72,9 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
             {teamData.squad?.map((person) => {
               return (
                 person.position === "Midfielder" && (
-                  <p className="player_name">{person.name}</p>
+                  <p key={uuid()} className="player_name">
+                    {person.name}
+                  </p>
                 )
               );
             })}
@@ -79,7 +84,9 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
             {teamData.squad?.map((person) => {
               return (
                 person.position === "Attacker" && (
-                  <p className="player_name">{person.name}</p>
+                  <p key={uuid()} className="player_name">
+                    {person.name}
+                  </p>
                 )
               );
             })}

@@ -12,7 +12,7 @@ const Teams = () => {
     const url = "http://api.football-data.org/v2/competitions/2021/teams";
     const options = {
       type: "GET",
-      headers: { "X-Auth-Token": "3fccf6a31f3e4b9fa28393d33f768c10" },
+      headers: { "X-Auth-Token": `${process.env.REACT_APP_API_KEY}` },
       dataType: "json",
     };
     const resp = await fetch(url, options);
