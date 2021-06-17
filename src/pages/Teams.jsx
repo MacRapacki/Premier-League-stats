@@ -34,34 +34,9 @@ const Teams = () => {
       .then((data) => setTeams(data))
       .catch((error) => console.log("error!"));
   }, []);
-
   return (
     <>
       <section className="teams">
-        {/* {teams?.teams?.map((team) => {
-          const { crestUrl, id, name } = team;
-          return (
-            <div className="teams_team" key={uuid()}>
-              <div className="team_img">
-                <img src={crestUrl} alt="team logo" />
-              </div>
-              <p className="team_name">{name}</p>
-              <div className="team_info_overlay">
-                <button
-                  type="button"
-                  className="team_button"
-                  onClick={() => openTeamInfo(id)}
-                >
-                  Find out more
-                </button>
-              </div>
-            </div>
-          );
-        })}
-        {teamInfoActive && (
-          <TeamInfo setTeamInfoActive={setTeamInfoActive} teamID={teamID} />
-        )} */}
-
         {teamInfoActive ? (
           <TeamInfo setTeamInfoActive={setTeamInfoActive} teamID={teamID} />
         ) : (

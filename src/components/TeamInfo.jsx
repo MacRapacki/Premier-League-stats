@@ -43,54 +43,61 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
         </div>
         <div className="team_members">
           <h2>Squad:</h2>
-          <div className="team_goalkeepers">
-            <h3>Goalkeepers:</h3>
-            {teamData.squad?.map((person) => {
-              return (
-                person.position === "Goalkeeper" && (
-                  <p key={uuid()} className="player_name">
-                    {person.name}
-                  </p>
-                )
-              );
-            })}
-          </div>
-          <div className="team_defenders">
-            <h3>Defenders:</h3>
-            {teamData.squad?.map((person) => {
-              return (
-                person.position === "Defender" && (
-                  <p key={uuid()} className="player_name">
-                    {person.name}
-                  </p>
-                )
-              );
-            })}
-          </div>
-          <div className="team_midfielders">
-            <h3>Midfielders:</h3>
-            {teamData.squad?.map((person) => {
-              return (
-                person.position === "Midfielder" && (
-                  <p key={uuid()} className="player_name">
-                    {person.name}
-                  </p>
-                )
-              );
-            })}
-          </div>
-          <div className="team_attackers">
-            <h3>Attakers:</h3>
-            {teamData.squad?.map((person) => {
-              return (
-                person.position === "Attacker" && (
-                  <p key={uuid()} className="player_name">
-                    {person.name}
-                  </p>
-                )
-              );
-            })}
-          </div>
+          {teamData?.squad?.length ? (
+            <>
+              {" "}
+              <div className="team_goalkeepers">
+                <h3>Goalkeepers:</h3>
+                {teamData.squad?.map((person) => {
+                  return (
+                    person.position === "Goalkeeper" && (
+                      <p key={uuid()} className="player_name">
+                        {person.name}
+                      </p>
+                    )
+                  );
+                })}
+              </div>
+              <div className="team_defenders">
+                <h3>Defenders:</h3>
+                {teamData.squad?.map((person) => {
+                  return (
+                    person.position === "Defender" && (
+                      <p key={uuid()} className="player_name">
+                        {person.name}
+                      </p>
+                    )
+                  );
+                })}
+              </div>
+              <div className="team_midfielders">
+                <h3>Midfielders:</h3>
+                {teamData.squad?.map((person) => {
+                  return (
+                    person.position === "Midfielder" && (
+                      <p key={uuid()} className="player_name">
+                        {person.name}
+                      </p>
+                    )
+                  );
+                })}
+              </div>
+              <div className="team_attackers">
+                <h3>Attakers:</h3>
+                {teamData.squad?.map((person) => {
+                  return (
+                    person.position === "Attacker" && (
+                      <p key={uuid()} className="player_name">
+                        {person.name}
+                      </p>
+                    )
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            "Squads will be update at the beginning of the season :)"
+          )}
         </div>
       </div>
     </div>
