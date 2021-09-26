@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import uuid from "react-uuid";
 
 const TeamInfo = ({ teamID, setTeamInfoActive }) => {
   const [teamData, setTeamData] = useState([]);
@@ -7,7 +8,7 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
     const url = `http://api.football-data.org/v2/teams/${teamID}`;
     const options = {
       type: "GET",
-      headers: { "X-Auth-Token": "3fccf6a31f3e4b9fa28393d33f768c10" },
+      headers: { "X-Auth-Token": `${process.env.REACT_APP_API_KEY}` },
       dataType: "json",
     };
 
@@ -26,8 +27,6 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
       .catch((error) => console.log("error!"));
   }, []);
 
-  console.log(teamData);
-
   return (
     <div className="team_overlay">
       <div className="team_info">
@@ -44,46 +43,61 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
         </div>
         <div className="team_members">
           <h2>Squad:</h2>
-          <div className="team_goalkeepers">
-            <h3>Goalkeepers:</h3>
-            {teamData.squad?.map((person) => {
-              return (
-                person.position === "Goalkeeper" && (
-                  <p className="player_name">{person.name}</p>
-                )
-              );
-            })}
-          </div>
-          <div className="team_defenders">
-            <h3>Defenders:</h3>
-            {teamData.squad?.map((person) => {
-              return (
-                person.position === "Defender" && (
-                  <p className="player_name">{person.name}</p>
-                )
-              );
-            })}
-          </div>
-          <div className="team_midfielders">
-            <h3>Midfielders:</h3>
-            {teamData.squad?.map((person) => {
-              return (
-                person.position === "Midfielder" && (
-                  <p className="player_name">{person.name}</p>
-                )
-              );
-            })}
-          </div>
-          <div className="team_attackers">
-            <h3>Attakers:</h3>
-            {teamData.squad?.map((person) => {
-              return (
-                person.position === "Attacker" && (
-                  <p className="player_name">{person.name}</p>
-                )
-              );
-            })}
-          </div>
+          {teamData?.squad?.length ? (
+            <>
+              {" "}
+              <div className="team_goalkeepers">
+                <h3>Goalkeepers:</h3>
+                {teamData.squad?.map((person) => {
+                  return (
+                    person.position === "Goalkeeper" && (
+                      <p key={uuid()} className="player_name">
+                        {person.name}
+                      </p>
+                    )
+                  );
+                })}
+              </div>
+              <div className="team_defenders">
+                <h3>Defenders:</h3>
+                {teamData.squad?.map((person) => {
+                  return (
+                    person.position === "Defender" && (
+                      <p key={uuid()} className="player_name">
+                        {person.name}
+                      </p>
+                    )
+                  );
+                })}
+              </div>
+              <div className="team_midfielders">
+                <h3>Midfielders:</h3>
+                {teamData.squad?.map((person) => {
+                  return (
+                    person.position === "Midfielder" && (
+                      <p key={uuid()} className="player_name">
+                        {person.name}
+                      </p>
+                    )
+                  );
+                })}
+              </div>
+              <div className="team_attackers">
+                <h3>Attakers:</h3>
+                {teamData.squad?.map((person) => {
+                  return (
+                    person.position === "Attacker" && (
+                      <p key={uuid()} className="player_name">
+                        {person.name}
+                      </p>
+                    )
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            "Squads will be update at the beginning of the season :)"
+          )}
         </div>
       </div>
     </div>
