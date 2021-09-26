@@ -24,7 +24,7 @@ const Table = () => {
   useEffect(() => {
     getStandings()
       .then((data) => setStandings(data))
-      .catch((error) => console.log("error"));
+      .catch((error) => console.log(`error: ${error}`));
   }, []);
 
   return (

@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 
 import uuid from "react-uuid";
-import TeamInfo from "../components/TeamInfo";
+// import TeamInfo from "../components/TeamInfo";
+
+const TeamInfo = React.lazy(() => import("../components/TeamInfo"));
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
@@ -38,32 +40,10 @@ const Teams = () => {
   return (
     <>
       <section className="teams">
-        {/* {teams?.teams?.map((team) => {
-          const { crestUrl, id, name } = team;
-          return (
-            <div className="teams_team" key={uuid()}>
-              <div className="team_img">
-                <img src={crestUrl} alt="team logo" />
-              </div>
-              <p className="team_name">{name}</p>
-              <div className="team_info_overlay">
-                <button
-                  type="button"
-                  className="team_button"
-                  onClick={() => openTeamInfo(id)}
-                >
-                  Find out more
-                </button>
-              </div>
-            </div>
-          );
-        })}
-        {teamInfoActive && (
-          <TeamInfo setTeamInfoActive={setTeamInfoActive} teamID={teamID} />
-        )} */}
-
         {teamInfoActive ? (
-          <TeamInfo setTeamInfoActive={setTeamInfoActive} teamID={teamID} />
+          <Suspense fallback={<div>loading...</div>}>
+            <TeamInfo setTeamInfoActive={setTeamInfoActive} teamID={teamID} />
+          </Suspense>
         ) : (
           <>
             {teams?.teams?.map((team) => {
