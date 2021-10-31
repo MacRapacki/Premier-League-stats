@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+=======
+import React, { useEffect, useState, Suspense } from "react";
+>>>>>>> 449fc3701379eeda2ba3dee8eb2aae21364f832b
 
 import uuid from "react-uuid";
-import TeamInfo from "../components/TeamInfo";
+// import TeamInfo from "../components/TeamInfo";
+
+const TeamInfo = React.lazy(() => import("../components/TeamInfo"));
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
@@ -41,7 +47,9 @@ const Teams = () => {
     <>
       <section className="teams">
         {teamInfoActive ? (
-          <TeamInfo setTeamInfoActive={setTeamInfoActive} teamID={teamID} />
+          <Suspense fallback={<div>loading...</div>}>
+            <TeamInfo setTeamInfoActive={setTeamInfoActive} teamID={teamID} />
+          </Suspense>
         ) : (
           <>
             {teams?.teams?.map((team) => {

@@ -21,6 +21,7 @@ const Scorers = () => {
     return data;
   };
   useEffect(() => {
+    console.log(process.env.REACT_APP_API_KEY);
     getScorers()
       .then((data) => setScorers(data))
       .catch((error) => console.log("error"));
