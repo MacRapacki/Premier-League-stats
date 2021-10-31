@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import uuid from "react-uuid";
 import TeamInfo from "../components/TeamInfo";
@@ -34,6 +35,8 @@ const Teams = () => {
       .then((data) => setTeams(data))
       .catch((error) => console.log("error!"));
   }, []);
+
+  console.log(teams);
   return (
     <>
       <section className="teams">
@@ -57,6 +60,9 @@ const Teams = () => {
                     >
                       Find out more
                     </button>
+                    <Link to={`/teams/${id}`} style={{ color: "red" }}>
+                      testtst
+                    </Link>
                   </div>
                 </div>
               );

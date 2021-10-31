@@ -76,6 +76,9 @@
       color: $clr-base-yellow;
       font-weight: bold;
       cursor: pointer;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
     }
   }
 }

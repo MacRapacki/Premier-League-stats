@@ -7,6 +7,7 @@ import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import Scorers from "./pages/Scorers";
 import Teams from "./pages/Teams";
+import TeamInfo from "./components/TeamInfo";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/Premier-League-stats/" component={Home} exact />
         <Route path="/table" component={Table} />
         <Route path="/scorers" component={Scorers} />
-        <Route path="/teams" component={Teams} />
+        <Route exact path="/teams" component={Teams} />
+        <Route path="/teams/:id" component={TeamInfo} />
       </Switch>
       <Footer />
     </Router>
