@@ -1,26 +1,24 @@
 {
   "files": {
-    "main.css": "/Premier-League-stats/static/css/main.a2ad103c.chunk.css",
-    "main.js": "/Premier-League-stats/static/js/main.e6b330e1.chunk.js",
-    "main.js.map": "/Premier-League-stats/static/js/main.e6b330e1.chunk.js.map",
-    "runtime-main.js": "/Premier-League-stats/static/js/runtime-main.298c3985.js",
-    "runtime-main.js.map": "/Premier-League-stats/static/js/runtime-main.298c3985.js.map",
-    "static/js/2.8aaac7b0.chunk.js": "/Premier-League-stats/static/js/2.8aaac7b0.chunk.js",
-    "static/js/2.8aaac7b0.chunk.js.map": "/Premier-League-stats/static/js/2.8aaac7b0.chunk.js.map",
-    "static/js/3.d9cd764e.chunk.js": "/Premier-League-stats/static/js/3.d9cd764e.chunk.js",
-    "static/js/3.d9cd764e.chunk.js.map": "/Premier-League-stats/static/js/3.d9cd764e.chunk.js.map",
-    "static/js/4.c2a0f8eb.chunk.js": "/Premier-League-stats/static/js/4.c2a0f8eb.chunk.js",
-    "static/js/4.c2a0f8eb.chunk.js.map": "/Premier-League-stats/static/js/4.c2a0f8eb.chunk.js.map",
+    "main.css": "/Premier-League-stats/static/css/main.320e3305.chunk.css",
+    "main.js": "/Premier-League-stats/static/js/main.24950cfa.chunk.js",
+    "main.js.map": "/Premier-League-stats/static/js/main.24950cfa.chunk.js.map",
+    "runtime-main.js": "/Premier-League-stats/static/js/runtime-main.fb19177b.js",
+    "runtime-main.js.map": "/Premier-League-stats/static/js/runtime-main.fb19177b.js.map",
+    "static/js/2.6396023e.chunk.js": "/Premier-League-stats/static/js/2.6396023e.chunk.js",
+    "static/js/2.6396023e.chunk.js.map": "/Premier-League-stats/static/js/2.6396023e.chunk.js.map",
+    "static/js/3.814e3323.chunk.js": "/Premier-League-stats/static/js/3.814e3323.chunk.js",
+    "static/js/3.814e3323.chunk.js.map": "/Premier-League-stats/static/js/3.814e3323.chunk.js.map",
     "index.html": "/Premier-League-stats/index.html",
-    "static/css/main.a2ad103c.chunk.css.map": "/Premier-League-stats/static/css/main.a2ad103c.chunk.css.map",
-    "static/js/2.8aaac7b0.chunk.js.LICENSE.txt": "/Premier-League-stats/static/js/2.8aaac7b0.chunk.js.LICENSE.txt",
+    "static/css/main.320e3305.chunk.css.map": "/Premier-League-stats/static/css/main.320e3305.chunk.css.map",
+    "static/js/2.6396023e.chunk.js.LICENSE.txt": "/Premier-League-stats/static/js/2.6396023e.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/Premier-League-stats/static/media/teamInfoBG.a6f36576.jpg",
     "static/media/premier-league-1.dbb39543.svg": "/Premier-League-stats/static/media/premier-league-1.dbb39543.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.298c3985.js",
-    "static/js/2.8aaac7b0.chunk.js",
-    "static/css/main.a2ad103c.chunk.css",
-    "static/js/main.e6b330e1.chunk.js"
+    "static/js/runtime-main.fb19177b.js",
+    "static/js/2.6396023e.chunk.js",
+    "static/css/main.320e3305.chunk.css",
+    "static/js/main.24950cfa.chunk.js"
   ]
 }
