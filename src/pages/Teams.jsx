@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-=======
 import React, { useEffect, useState, Suspense } from "react";
->>>>>>> 449fc3701379eeda2ba3dee8eb2aae21364f832b
-
+import { Link } from "react-router-dom";
 import uuid from "react-uuid";
 // import TeamInfo from "../components/TeamInfo";
 
