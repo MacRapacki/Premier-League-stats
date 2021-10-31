@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import uuid from "react-uuid";
+import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 
-const TeamInfo = ({ teamID, setTeamInfoActive }) => {
+const TeamInfo = ({ teamID, setTeamInfoActive, match }) => {
   const [teamData, setTeamData] = useState([]);
 
+  console.log(match);
+
   const getTeamData = async () => {
-    const url = `http://api.football-data.org/v2/teams/${teamID}`;
+    const url = `http://api.football-data.org/v2/teams/${match.params.id}`;
     const options = {
       type: "GET",
       headers: { "X-Auth-Token": `${process.env.REACT_APP_API_KEY}` },
@@ -29,14 +33,11 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
 
   return (
     <div className="team_overlay">
+      <h1>{match.params.id}</h1>
       <div className="team_info">
-        <button
-          type="button"
-          className="team_info_closeBtn"
-          onClick={() => setTeamInfoActive(false)}
-        >
+        <Link type="button" className="team_info_closeBtn" to="/teams">
           X
-        </button>
+        </Link>
         <div className="team_crest">
           <img src={teamData.crestUrl} alt="Team Crest" />
           <p className="team_name">{teamData.name}</p>
@@ -104,4 +105,4 @@ const TeamInfo = ({ teamID, setTeamInfoActive }) => {
   );
 };
 
-export default TeamInfo;
+export default withRouter(TeamInfo);
