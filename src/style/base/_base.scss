@@ -18,10 +18,9 @@ h2 {
 }
 
 section {
-  min-height: calc(100vh - 80px);
-  padding-top: 50px;
+  min-height: calc(100vh - 50px);
+  padding: 50px 0 50px 0;
   width: 100%;
-  padding-top: $nav-height;
   max-width: 900px;
   margin: 0 auto;
   font-size: 18px;

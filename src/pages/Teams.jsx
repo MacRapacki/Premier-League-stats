@@ -56,15 +56,13 @@ const Teams = () => {
                   </div>
                   <p className="team_name">{name}</p>
                   <div className="team_info_overlay">
-                    <button
-                      type="button"
+                    <Link
                       className="team_button"
-                      onClick={() => openTeamInfo(id)}
+                      to={`/teams/${id}`}
+                      style={{ color: "red" }}
+                      // onClick={() => openTeamInfo(id)}
                     >
                       Find out more
-                    </button>
-                    <Link to={`/teams/${id}`} style={{ color: "red" }}>
-                      testtst
                     </Link>
                   </div>
                 </div>
