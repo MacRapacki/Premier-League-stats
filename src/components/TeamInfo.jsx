@@ -3,10 +3,8 @@ import uuid from "react-uuid";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 
-const TeamInfo = ({ teamID, setTeamInfoActive, match }) => {
+const TeamInfo = ({ match }) => {
   const [teamData, setTeamData] = useState([]);
-
-  console.log(match);
 
   const getTeamData = async () => {
     const url = `http://api.football-data.org/v2/teams/${match.params.id}`;
